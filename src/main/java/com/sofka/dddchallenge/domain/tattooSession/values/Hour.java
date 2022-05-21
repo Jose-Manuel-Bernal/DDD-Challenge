@@ -4,11 +4,15 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.time.DateTimeException;
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class Hour implements ValueObject<LocalTime> {
     public LocalTime hour;
 
-    public Hour(int hours, int minutes, int seconds){
+    public Hour(Integer hours, Integer minutes, Integer seconds){
+        Objects.requireNonNull(hours);
+        Objects.requireNonNull(minutes);
+        Objects.requireNonNull(seconds);
         try{
             hour = LocalTime.of(hours,minutes,seconds);
             if (hour.isAfter(LocalTime.of(18,0,0))) {

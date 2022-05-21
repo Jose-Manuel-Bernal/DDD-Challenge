@@ -9,7 +9,10 @@ import java.util.Objects;
 public class Date implements ValueObject<LocalDate> {
     private LocalDate date;
 
-    public Date(int day, int month, int year) {//(2)
+    public Date(Integer year, Integer month, Integer day) {
+        Objects.requireNonNull(year);
+        Objects.requireNonNull(month);
+        Objects.requireNonNull(day);
         try {
             date = LocalDate.of(year, month, day);
             if(date.isAfter(LocalDate.now())){
