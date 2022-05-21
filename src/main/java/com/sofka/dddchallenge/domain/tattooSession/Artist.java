@@ -1,9 +1,9 @@
-package com.sofka.dddchallenge.tattooSession;
+package com.sofka.dddchallenge.domain.tattooSession;
 
 import co.com.sofka.domain.generic.Entity;
-import com.sofka.dddchallenge.tattooSession.values.ArtistID;
-import com.sofka.dddchallenge.tattooSession.values.Name;
-import com.sofka.dddchallenge.tattooSession.values.Specialization;
+import com.sofka.dddchallenge.domain.tattooSession.values.ArtistID;
+import com.sofka.dddchallenge.domain.tattooSession.values.Name;
+import com.sofka.dddchallenge.domain.tattooSession.values.Specialization;
 
 import java.util.Objects;
 

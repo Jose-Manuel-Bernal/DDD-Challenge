@@ -1,20 +1,20 @@
-package com.sofka.dddchallenge.tattooSession.events;
+package com.sofka.dddchallenge.domain.tattooSession.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.dddchallenge.tattooSession.values.NumberOfSession;
-import com.sofka.dddchallenge.tattooSession.values.ProjectName;
+import com.sofka.dddchallenge.domain.tattooSession.values.Name;
+import com.sofka.dddchallenge.domain.tattooSession.values.NumberOfSession;
 
 public class TattooSessionCreated extends DomainEvent {
-    private final ProjectName projectName;
+    private final Name projectName;
     private final NumberOfSession numberOfSession;
 
-    public TattooSessionCreated(ProjectName projectName, NumberOfSession numberOfSession){
+    public TattooSessionCreated(Name projectName, NumberOfSession numberOfSession){
         super("sofka.tattoosession.tattoosessioncreated");
         this.projectName = projectName;
         this.numberOfSession = numberOfSession;
     }
 
-    public ProjectName getProjectName() {
+    public Name getProjectName() {
         return projectName;
     }
 

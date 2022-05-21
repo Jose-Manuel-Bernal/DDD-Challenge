@@ -1,9 +1,9 @@
-package com.sofka.dddchallenge.tattooSession.events;
+package com.sofka.dddchallenge.domain.tattooSession.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.dddchallenge.tattooSession.values.ArtistID;
-import com.sofka.dddchallenge.tattooSession.values.Name;
-import com.sofka.dddchallenge.tattooSession.values.Specialization;
+import com.sofka.dddchallenge.domain.tattooSession.values.ArtistID;
+import com.sofka.dddchallenge.domain.tattooSession.values.Name;
+import com.sofka.dddchallenge.domain.tattooSession.values.Specialization;
 
 public class ArtistAdded extends DomainEvent {
     private final ArtistID artistID;

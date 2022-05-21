@@ -1,9 +1,9 @@
-package com.sofka.dddchallenge.tattooSession;
+package com.sofka.dddchallenge.domain.tattooSession;
 
 import co.com.sofka.domain.generic.Entity;
-import com.sofka.dddchallenge.tattooSession.values.ClientID;
-import com.sofka.dddchallenge.tattooSession.values.Name;
-import com.sofka.dddchallenge.tattooSession.values.PhoneNumber;
+import com.sofka.dddchallenge.domain.tattooSession.values.ClientID;
+import com.sofka.dddchallenge.domain.tattooSession.values.Name;
+import com.sofka.dddchallenge.domain.tattooSession.values.PhoneNumber;
 
 import java.util.Objects;
 
@@ -12,8 +12,8 @@ public class Client extends Entity<ClientID> {
     private Name name;
     private PhoneNumber phoneNumber;
 
-    public Client(ClientID entityId, Name name, PhoneNumber phoneNumber) {
-        super(entityId);
+    public Client(ClientID clientId, Name name, PhoneNumber phoneNumber) {
+        super(clientId);
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
