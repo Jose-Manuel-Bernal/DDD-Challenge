@@ -12,6 +12,9 @@ public class PhoneNumber implements ValueObject<String> {
         if (phoneNumber.isBlank()) {
             throw new IllegalArgumentException("The phone number is empty");
         }
+        if (phoneNumber.length() != 10) {
+            throw new IllegalArgumentException("Phone Number must be 10 digits.");
+        }
     }
 
     public String value() {
