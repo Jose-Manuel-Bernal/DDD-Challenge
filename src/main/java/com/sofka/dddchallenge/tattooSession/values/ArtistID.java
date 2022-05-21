@@ -1,4 +1,6 @@
 package com.sofka.dddchallenge.tattooSession.values;
 
-public class ArtistID {
+import co.com.sofka.domain.generic.Identity;
+
+public class ArtistID extends Identity {
 }
