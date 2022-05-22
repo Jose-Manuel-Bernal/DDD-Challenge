@@ -1,9 +1,13 @@
 package com.sofka.dddchallenge.domain.tools;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
+import com.sofka.dddchallenge.domain.tattooSession.TattooSession;
+import com.sofka.dddchallenge.domain.tattooSession.values.TattooSessionID;
 import com.sofka.dddchallenge.domain.tools.events.*;
 import com.sofka.dddchallenge.domain.tools.values.*;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -21,8 +25,23 @@ public class Tools extends AggregateEvent<ToolsID> {
         appendChange(new ToolsCreated(table, stretcher)).apply();
     }
 
+    private Tools(ToolsID toolsID){
+        super(toolsID);
+        subscribe(new ToolsChange(this));
+    }
+
+    public static Tools from(ToolsID toolsID, List<DomainEvent> events){
+        var tools = new Tools(toolsID);
+        events.forEach(tools::applyEvent);
+        return tools;
+    }
+
     public void updateTable(Table table){
         appendChange(new TableUpdated(table)).apply();
+    }
+
+    public void updateStretcher(Stretcher stretcher){
+        appendChange(new StretcherUpdated(stretcher)).apply();
     }
 
     public void addDesing(DesingID desingID,
