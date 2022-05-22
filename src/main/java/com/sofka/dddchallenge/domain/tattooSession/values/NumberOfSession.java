@@ -14,6 +14,7 @@ public class NumberOfSession implements ValueObject<Integer> {
         }
     }
 
+    @Override
     public Integer value() {
         return numberOfSession;
     }
