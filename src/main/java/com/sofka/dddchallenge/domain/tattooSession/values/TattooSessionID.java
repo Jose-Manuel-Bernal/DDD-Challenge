@@ -10,7 +10,7 @@ public class TattooSessionID extends Identity {
         super(id);
     }
 
-    public  TattooSessionID of(String id){
+    public static TattooSessionID of(String id){
         return new TattooSessionID(id);
     }
 }

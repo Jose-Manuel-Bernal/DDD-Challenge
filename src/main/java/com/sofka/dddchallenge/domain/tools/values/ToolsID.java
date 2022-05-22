@@ -10,7 +10,7 @@ public class ToolsID extends Identity {
         super(id);
     }
 
-    public ToolsID of(String id){
+    public static ToolsID of(String id){
         return new ToolsID(id);
     }
 }
