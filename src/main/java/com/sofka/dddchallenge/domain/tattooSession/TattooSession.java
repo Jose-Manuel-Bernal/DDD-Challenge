@@ -85,20 +85,6 @@ public class TattooSession extends AggregateEvent<TattooSessionID> {
         appendChange(new AppointmentHourUpdated(hour)).apply();
     }
 
-//    public Optional<Artist> getArtistById(ArtistID artistID){
-//        return artists()
-//                .stream()
-//                .filter(artist -> artist.identity().equals(artistID))
-//                .findFirst();
-//    }
-//
-//    public Optional<Client> getClientById(ClientID clientID){
-//        return clients()
-//                .stream()
-//                .filter(client -> client.identity().equals(clientID))
-//                .findFirst();
-//    }
-
     public Name projectName() {
         return projectName;
     }
