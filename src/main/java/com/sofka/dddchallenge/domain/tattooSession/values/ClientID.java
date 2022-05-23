@@ -10,7 +10,7 @@ public class ClientID extends Identity {
         super(id);
     }
 
-    public ClientID of(String id){
+    public static ClientID of(String id){
         return new ClientID(id);
     }
 }

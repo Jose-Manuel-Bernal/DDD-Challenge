@@ -10,7 +10,7 @@ public class AppointmentID extends Identity {
         super(id);
     }
 
-    public AppointmentID of(String id){
+    public static AppointmentID of(String id){
         return new AppointmentID(id);
     }
 }

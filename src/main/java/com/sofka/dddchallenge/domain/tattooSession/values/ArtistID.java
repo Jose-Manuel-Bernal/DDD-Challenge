@@ -10,7 +10,7 @@ public class ArtistID extends Identity {
         super(id);
     }
 
-    public ArtistID of(String id){
+    public static ArtistID of(String id){
         return new ArtistID(id);
     }
 }
