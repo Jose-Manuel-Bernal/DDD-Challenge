@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class NumberOfSession implements ValueObject<Integer> {
-    private Integer numberOfSession;
+    private final Integer numberOfSession;
 
     public NumberOfSession (Integer numberOfSession){
         this.numberOfSession = Objects.requireNonNull(numberOfSession);

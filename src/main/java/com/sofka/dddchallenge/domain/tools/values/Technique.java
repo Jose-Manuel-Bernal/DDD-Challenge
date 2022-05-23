@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Technique implements ValueObject<TechniquesEnum> {
-    private TechniquesEnum technique;
+    private final TechniquesEnum technique;
 
     public Technique(TechniquesEnum technique) {
         this.technique = Objects.requireNonNull(technique);

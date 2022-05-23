@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Color implements ValueObject<ColorsEnum> {
-    private ColorsEnum color;
+    private final ColorsEnum color;
 
     public Color(ColorsEnum color){
         this.color = Objects.requireNonNull(color);

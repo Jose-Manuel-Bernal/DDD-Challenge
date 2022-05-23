@@ -7,7 +7,7 @@ import java.time.LocalTime;
 import java.util.Objects;
 
 public class Hour implements ValueObject<LocalTime> {
-    public LocalTime hour;
+    private final LocalTime hour;
 
     public Hour(Integer hours, Integer minutes, Integer seconds){
         Objects.requireNonNull(hours);

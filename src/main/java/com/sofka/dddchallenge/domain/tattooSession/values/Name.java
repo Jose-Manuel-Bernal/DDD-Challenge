@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Name implements ValueObject<String> {
-    private String name;
+    private final String name;
 
     public Name(String name){
         this.name = Objects.requireNonNull(name);

@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class TypeOfMachine implements ValueObject<TypeOfMachinesEnums> {
-    private TypeOfMachinesEnums typeOfMachines;
+    private final TypeOfMachinesEnums typeOfMachines;
 
     public TypeOfMachine(TypeOfMachinesEnums typeOfMachines) {
         this.typeOfMachines = Objects.requireNonNull(typeOfMachines);

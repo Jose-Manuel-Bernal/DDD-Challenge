@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Date implements ValueObject<LocalDate> {
-    private LocalDate date;
+    private final LocalDate date;
 
     public Date(Integer year, Integer month, Integer day) {
         Objects.requireNonNull(year);

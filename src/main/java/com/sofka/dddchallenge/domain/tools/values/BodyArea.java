@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class BodyArea implements ValueObject<String>{
-    private String bodyArea;
+    private final String bodyArea;
 
     public BodyArea (String bodyArea){
         this.bodyArea = Objects.requireNonNull(bodyArea);

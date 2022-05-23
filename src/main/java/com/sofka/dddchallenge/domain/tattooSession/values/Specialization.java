@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Specialization implements ValueObject<String> {
-    private String specialization;
+    private final String specialization;
 
     public Specialization(String specialization){
         this.specialization = Objects.requireNonNull(specialization);

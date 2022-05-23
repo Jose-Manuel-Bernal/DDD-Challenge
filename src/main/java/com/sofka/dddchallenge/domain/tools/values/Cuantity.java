@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Cuantity implements ValueObject<Float> {
-    private Float cuantity;
+    private final Float cuantity;
 
     public Cuantity(Float cuantity) {
         this.cuantity = Objects.requireNonNull(cuantity);

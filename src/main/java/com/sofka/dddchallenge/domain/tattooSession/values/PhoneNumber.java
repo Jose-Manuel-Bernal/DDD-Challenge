@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class PhoneNumber implements ValueObject<String> {
-    private String phoneNumber;
+    private final String phoneNumber;
 
     public PhoneNumber(String phoneNumber){
         this.phoneNumber = Objects.requireNonNull(phoneNumber);

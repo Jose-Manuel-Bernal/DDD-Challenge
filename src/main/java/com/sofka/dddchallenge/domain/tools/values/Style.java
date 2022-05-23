@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Style implements ValueObject<StylesEnum> {
-    private StylesEnum style;
+    private final StylesEnum style;
 
     public Style(StylesEnum style) {
         this.style = Objects.requireNonNull(style);

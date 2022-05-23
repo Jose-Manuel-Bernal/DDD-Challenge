@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Table implements ValueObject<Boolean> {
-    private Boolean table;
+    private final Boolean table;
 
     public Table(Boolean table) {
         this.table = Objects.requireNonNull(table);

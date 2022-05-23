@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Brand implements ValueObject<BrandsEnum> {
-    private BrandsEnum brand;
+    private final BrandsEnum brand;
 
     public Brand(BrandsEnum brand) {
         this.brand = Objects.requireNonNull(brand);
