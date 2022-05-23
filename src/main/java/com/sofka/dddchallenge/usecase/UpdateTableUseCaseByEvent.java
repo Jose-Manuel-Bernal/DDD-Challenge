@@ -14,7 +14,7 @@ public class UpdateTableUseCaseByEvent extends UseCase<TriggeredEvent<ToolsCreat
     @Override
     public void executeUseCase(TriggeredEvent<ToolsCreated> toolsCreatedTriggeredEvent) {
         var event = toolsCreatedTriggeredEvent.getDomainEvent();
-        var tools = Tools.from(ToolsID.of(event.aggregateRootId()),repository().getEventsBy(event.aggregateRootId()));
+        var tools = Tools.from(ToolsID.of(event.aggregateRootId()), this.retrieveEvents());
         tools.updateTable(new Table(true));
         emit().onResponse(new ResponseEvents(tools.getUncommittedChanges()));
     }
